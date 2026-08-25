@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Environmental Solutions | Angela Williams</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="hero">
+    <div class="hero__content">
+      <p class="badge">Environmental Solutions</p>
+
+      <h1 class="title">
+        Owner / CEO: <span class="accent">Angela Williams</span>
+      </h1>
+
+      <p class="subtitle">
+        Serving with trusted environmental services for water and wastewater systems.
+      </p>
+
+      <div class="contact-card">
+        <h2 class="contact-card__title">Contact</h2>
+        <a class="contact-card__phone" href="tel:6155009790">📞 615-500-9790</a>
+        <p class="contact-card__note">Call for quotes & scheduling.</p>
+      </div>
+
+      <section class="services" aria-label="Services">
+        <h2 class="section-title">Services</h2>
+        <ul class="service-list">
+          <li>✅ Pumping Professionals</li>
+          <li>✅ Grease Trap</li>
+          <li>✅ Car Wash</li>
+          <li>✅ Storm Water</li>
+          <li>✅ Oil / Water Separator</li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- Right-side illustration (cross + tree + dove) -->
+    <div class="hero__art" aria-hidden="true">
+      <div class="art-frame">
+        <svg viewBox="0 0 420 520" class="art-svg" role="img" aria-label="Cross growing out of a tree with a dove">
+          <!-- Background glow -->
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#C9A6FF"/>
+              <stop offset="60%" stop-color="#7B61FF"/>
+              <stop offset="100%" stop-color="#4B2FBF"/>
+            </linearGradient>
+            <linearGradient id="tree" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#B57CFF"/>
+              <stop offset="100%" stop-color="#4B2FBF"/>
+            </linearGradient>
+          </defs>
+
+          <!-- soft halo -->
+          <circle cx="250" cy="120" r="90" fill="url(#g1)" opacity="0.18"></circle>
+
+          <!-- Tree trunk -->
+          <path d="M215 420
+                   C205 360, 205 315, 215 270
+                   C230 210, 262 175, 248 135
+                   C236 102, 198 92, 188 125
+                   C174 170, 212 208, 220 245
+                   C232 302, 228 350, 214 420Z"
+                fill="url(#tree)" opacity="0.95"/>
+
+          <!-- Branches -->
+          <path d="M205 260
+                   C155 245, 130 210, 120 175
+                   C148 190, 176 200, 205 220Z"
+                fill="#B57CFF" opacity="0.35"/>
+
+          <path d="M232 255
+                   C290 230, 315 195, 332 155
+                   C302 175, 270 185, 238 215Z"
+                fill="#B57CFF" opacity="0.35"/>
+
+          <!-- Cross growing out of the tree -->
+          <g>
+            <!-- Cross vertical -->
+            <rect x="205" y="95" width="30" height="190" rx="8" fill="#8B6BFF"/>
+            <rect x="195" y="160" width="50" height="30" rx="8" fill="#8B6BFF"/>
+
+            <!-- Cross highlight -->
+            <rect x="210" y="100" width="20" height="180" rx="7" fill="#D7C2FF" opacity="0.35"/>
+          </g>
+
+          <!-- Dove sitting on the right -->
+          <g transform="translate(0,0)">
+            <!-- dove body -->
+            <ellipse cx="325" cy="250" rx="38" ry="26" fill="#EDE7FF"/>
+            <!-- dove head -->
+            <circle cx="350" cy="235" r="12" fill="#EDE7FF"/>
+            <!-- dove beak -->
+            <path d="M360 240 L372 235 L360 228 Z" fill="#C9A6FF"/>
+            <!-- wing -->
+            <path d="M300 245
+                     C290 270, 315 290, 345 275
+                     C325 275, 315 263, 300 245Z"
+                  fill="#D7C2FF" opacity="0.9"/>
+            <!-- tail -->
+            <path d="M298 258
+                     C280 270, 285 292, 307 288
+                     C292 280, 292 270, 298 258Z"
+                  fill="#B57CFF" opacity="0.35"/>
+
+            <!-- perch (small leaf/branch) -->
+            <path d="M285 285 C305 295, 320 300, 350 295"
+                  stroke="#7B61FF" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.6"/>
+          </g>
+
+          <!-- Ground shimmer -->
+          <path d="M80 440 C140 410, 210 420, 270 430 C320 440, 350 455, 380 470
+                   L380 520 L80 520 Z"
+                fill="#4B2FBF" opacity="0.18"/>
+        </svg>
+
+        <p class="art-caption">🌿 ✝️ 🕊️ Cross • Tree • Dove</p>
+      </div>
+    </div>
+  </header>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Environmental Solutions • Angela Williams</p>
+    <p class="footer__small">Lilac & Purple theme — add more pictures when formatting is confirmed.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
