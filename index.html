@@ -1,135 +1,514 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Environmental Solutions | Angela Williams</title>
+
+  <title>Faith Works Environmental Solutions LLC</title>
+
+  <meta
+    name="description"
+    content="Faith Works Environmental Solutions LLC provides professional grease trap pumping, inspections, maintenance, and commercial environmental services."
+  />
+
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <header class="hero">
-    <div class="hero__content">
-      <p class="badge">Environmental Solutions</p>
 
-      <h1 class="title">
-        Owner / CEO: <span class="accent">Angela Williams</span>
-      </h1>
+  <!-- ================= NAVIGATION ================= -->
 
-      <p class="subtitle">
-        Serving with trusted environmental services for water and wastewater systems.
-      </p>
+  <header class="site-header">
 
-      <div class="contact-card">
-        <h2 class="contact-card__title">Contact</h2>
-        <a class="contact-card__phone" href="tel:6155009790">📞 615-500-9790</a>
-        <p class="contact-card__note">Call for quotes & scheduling.</p>
-      </div>
+    <div class="nav-container">
 
-      <section class="services" aria-label="Services">
-        <h2 class="section-title">Services</h2>
-        <ul class="service-list">
-          <li>✅ Pumping Professionals</li>
-          <li>✅ Grease Trap</li>
-          <li>✅ Car Wash</li>
-          <li>✅ Storm Water</li>
-          <li>✅ Oil / Water Separator</li>
-        </ul>
-      </section>
+      <a href="#" class="logo">
+        <div class="logo-symbol">✝</div>
+
+        <div>
+          <span class="logo-main">FAITH WORKS</span>
+          <span class="logo-sub">ENVIRONMENTAL SOLUTIONS LLC</span>
+        </div>
+      </a>
+
+      <nav class="navigation">
+        <a href="#services">Services</a>
+        <a href="#about">Why Faith Works</a>
+        <a href="#industries">Who We Serve</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a href="tel:6155009790" class="nav-phone">
+        615-500-9790
+      </a>
+
     </div>
 
-    <!-- Right-side illustration (cross + tree + dove) -->
-    <div class="hero__art" aria-hidden="true">
-      <div class="art-frame">
-        <svg viewBox="0 0 420 520" class="art-svg" role="img" aria-label="Cross growing out of a tree with a dove">
-          <!-- Background glow -->
-          <defs>
-            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#C9A6FF"/>
-              <stop offset="60%" stop-color="#7B61FF"/>
-              <stop offset="100%" stop-color="#4B2FBF"/>
-            </linearGradient>
-            <linearGradient id="tree" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#B57CFF"/>
-              <stop offset="100%" stop-color="#4B2FBF"/>
-            </linearGradient>
-          </defs>
-
-          <!-- soft halo -->
-          <circle cx="250" cy="120" r="90" fill="url(#g1)" opacity="0.18"></circle>
-
-          <!-- Tree trunk -->
-          <path d="M215 420
-                   C205 360, 205 315, 215 270
-                   C230 210, 262 175, 248 135
-                   C236 102, 198 92, 188 125
-                   C174 170, 212 208, 220 245
-                   C232 302, 228 350, 214 420Z"
-                fill="url(#tree)" opacity="0.95"/>
-
-          <!-- Branches -->
-          <path d="M205 260
-                   C155 245, 130 210, 120 175
-                   C148 190, 176 200, 205 220Z"
-                fill="#B57CFF" opacity="0.35"/>
-
-          <path d="M232 255
-                   C290 230, 315 195, 332 155
-                   C302 175, 270 185, 238 215Z"
-                fill="#B57CFF" opacity="0.35"/>
-
-          <!-- Cross growing out of the tree -->
-          <g>
-            <!-- Cross vertical -->
-            <rect x="205" y="95" width="30" height="190" rx="8" fill="#8B6BFF"/>
-            <rect x="195" y="160" width="50" height="30" rx="8" fill="#8B6BFF"/>
-
-            <!-- Cross highlight -->
-            <rect x="210" y="100" width="20" height="180" rx="7" fill="#D7C2FF" opacity="0.35"/>
-          </g>
-
-          <!-- Dove sitting on the right -->
-          <g transform="translate(0,0)">
-            <!-- dove body -->
-            <ellipse cx="325" cy="250" rx="38" ry="26" fill="#EDE7FF"/>
-            <!-- dove head -->
-            <circle cx="350" cy="235" r="12" fill="#EDE7FF"/>
-            <!-- dove beak -->
-            <path d="M360 240 L372 235 L360 228 Z" fill="#C9A6FF"/>
-            <!-- wing -->
-            <path d="M300 245
-                     C290 270, 315 290, 345 275
-                     C325 275, 315 263, 300 245Z"
-                  fill="#D7C2FF" opacity="0.9"/>
-            <!-- tail -->
-            <path d="M298 258
-                     C280 270, 285 292, 307 288
-                     C292 280, 292 270, 298 258Z"
-                  fill="#B57CFF" opacity="0.35"/>
-
-            <!-- perch (small leaf/branch) -->
-            <path d="M285 285 C305 295, 320 300, 350 295"
-                  stroke="#7B61FF" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.6"/>
-          </g>
-
-          <!-- Ground shimmer -->
-          <path d="M80 440 C140 410, 210 420, 270 430 C320 440, 350 455, 380 470
-                   L380 520 L80 520 Z"
-                fill="#4B2FBF" opacity="0.18"/>
-        </svg>
-
-        <p class="art-caption">🌿 ✝️ 🕊️ Cross • Tree • Dove</p>
-      </div>
-    </div>
   </header>
 
+
+  <!-- ================= HERO ================= -->
+
+  <main>
+
+    <section class="hero">
+
+      <div class="hero-content">
+
+        <span class="eyebrow">
+          FAITH-BASED • SERVICE-DRIVEN • COMMUNITY-FOCUSED
+        </span>
+
+        <h1>
+          Keep Your Kitchen
+          <span>Clean, Compliant</span>
+          & Running Smoothly.
+        </h1>
+
+        <p class="hero-text">
+          Professional grease trap pumping, inspections, and
+          commercial environmental services you can count on.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="tel:6155009790" class="button button-primary">
+            📞 Call 615-500-9790
+          </a>
+
+          <a href="#services" class="button button-secondary">
+            View Our Services
+          </a>
+
+        </div>
+
+        <div class="hero-trust">
+
+          <div>
+            <strong>✓</strong>
+            Licensed & Insured
+          </div>
+
+          <div>
+            <strong>✓</strong>
+            Certified & Experienced
+          </div>
+
+          <div>
+            <strong>✓</strong>
+            Reliable Service
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- MAIN IMAGE -->
+
+      <div class="hero-image">
+
+        <!--
+          Replace "purple-truck.jpg" with the actual filename
+          of your purple Faith Works truck photo.
+        -->
+
+        <img
+          src="images/purple-truck.jpg"
+          alt="Faith Works Environmental Solutions purple service truck"
+        />
+
+        <div class="image-badge">
+
+          <span>FAITH WORKS</span>
+
+          <strong>
+            ENVIRONMENTAL<br />
+            SOLUTIONS
+          </strong>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= SERVICES ================= -->
+
+    <section id="services" class="services-section">
+
+      <div class="section-heading">
+
+        <span class="section-label">
+          WHAT WE DO
+        </span>
+
+        <h2>
+          Professional Services.
+          <span>Faithful Service.</span>
+        </h2>
+
+        <p>
+          Reliable environmental services designed to keep your
+          business clean, compliant, and running smoothly.
+        </p>
+
+      </div>
+
+
+      <div class="services-grid">
+
+        <article class="service-card">
+
+          <div class="service-icon">♻</div>
+
+          <div>
+            <h3>Grease Trap Pumping</h3>
+
+            <p>
+              Professional pumping services that help prevent
+              backups, odors, and costly interruptions.
+            </p>
+          </div>
+
+        </article>
+
+
+        <article class="service-card">
+
+          <div class="service-icon">✓</div>
+
+          <div>
+            <h3>Grease Trap Inspections</h3>
+
+            <p>
+              Detailed inspections to help keep your kitchen
+              operating safely and compliantly.
+            </p>
+          </div>
+
+        </article>
+
+
+        <article class="service-card">
+
+          <div class="service-icon">⚙</div>
+
+          <div>
+            <h3>Routine Maintenance</h3>
+
+            <p>
+              Scheduled service designed to prevent problems
+              before they become expensive repairs.
+            </p>
+          </div>
+
+        </article>
+
+
+        <article class="service-card">
+
+          <div class="service-icon">24</div>
+
+          <div>
+            <h3>Emergency Service</h3>
+
+            <p>
+              When your business needs help, we're ready to
+              respond with dependable service.
+            </p>
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= FEATURE / WORKER ================= -->
+
+    <section class="feature-section">
+
+      <div class="feature-image">
+
+        <!--
+          Replace "woman-working.jpg" with your worker photo.
+        -->
+
+        <img
+          src="images/woman-working.jpg"
+          alt="Faith Works technician performing grease trap service"
+        />
+
+        <div class="equipment-tag">
+          PROFESSIONAL<br />
+          EQUIPMENT
+        </div>
+
+      </div>
+
+
+      <div class="feature-content">
+
+        <span class="section-label">
+          SERVICE YOU CAN COUNT ON
+        </span>
+
+        <h2>
+          We Handle the Mess.
+          <span>You Focus on Your Mission.</span>
+        </h2>
+
+        <p>
+          Faith Works Environmental Solutions provides dependable
+          commercial grease trap and environmental services with
+          professionalism, care, and attention to detail.
+        </p>
+
+
+        <ul class="check-list">
+
+          <li>
+            <span>✓</span>
+            Reliable, on-time service
+          </li>
+
+          <li>
+            <span>✓</span>
+            Eco-friendly disposal
+          </li>
+
+          <li>
+            <span>✓</span>
+            Detailed service reports
+          </li>
+
+          <li>
+            <span>✓</span>
+            Professional communication
+          </li>
+
+          <li>
+            <span>✓</span>
+            Safety-focused service
+          </li>
+
+        </ul>
+
+
+        <a href="#contact" class="button button-primary">
+          Get a Free Quote
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= WHO WE SERVE ================= -->
+
+    <section id="industries" class="industries-section">
+
+      <div class="section-heading">
+
+        <span class="section-label">
+          WHO WE SERVE
+        </span>
+
+        <h2>
+          Built for the Businesses
+          <span>We Serve.</span>
+        </h2>
+
+      </div>
+
+
+      <div class="industry-grid">
+
+        <div class="industry-card">
+          <div class="industry-icon">⛪</div>
+          <h3>Church Kitchens</h3>
+          <p>Clean, safe, and ready to serve your ministry.</p>
+        </div>
+
+        <div class="industry-card">
+          <div class="industry-icon">🏫</div>
+          <h3>School Kitchens</h3>
+          <p>Reliable service for safe and compliant kitchens.</p>
+        </div>
+
+        <div class="industry-card">
+          <div class="industry-icon">🍽</div>
+          <h3>Restaurants</h3>
+          <p>Keep your kitchen flowing and your business moving.</p>
+        </div>
+
+        <div class="industry-card">
+          <div class="industry-icon">🏢</div>
+          <h3>Commercial Facilities</h3>
+          <p>Professional environmental solutions for your facility.</p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= WHY FAITH WORKS ================= -->
+
+    <section id="about" class="why-section">
+
+      <div class="why-content">
+
+        <span class="section-label">
+          WHY FAITH WORKS?
+        </span>
+
+        <h2>
+          Cleaner Systems.
+          <span>Healthier Communities.</span>
+        </h2>
+
+        <p>
+          We believe great service starts with integrity. Our goal
+          is simple: provide dependable environmental services while
+          treating every customer, kitchen, and community with care.
+        </p>
+
+      </div>
+
+
+      <div class="promise-card">
+
+        <div class="promise-icon">
+          ✓
+        </div>
+
+        <div>
+
+          <h3>
+            Our Promise
+          </h3>
+
+          <p>
+            We show up when we say we will, do the job right,
+            and communicate clearly.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= SERVICE AREA ================= -->
+
+    <section class="area-section">
+
+      <div>
+
+        <span class="section-label">
+          SERVING NASHVILLE & SURROUNDING AREAS
+        </span>
+
+        <h2>
+          Professional.
+          <span>Reliable. Faith Driven.</span>
+        </h2>
+
+      </div>
+
+      <div class="area-list">
+
+        <span>✓ Nashville</span>
+        <span>✓ Surrounding Areas</span>
+        <span>✓ Commercial Properties</span>
+        <span>✓ Restaurants</span>
+        <span>✓ Schools</span>
+        <span>✓ Churches</span>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact" class="contact-section">
+
+      <div class="contact-content">
+
+        <span class="section-label">
+          LET'S GET TO WORK
+        </span>
+
+        <h2>
+          Don't Get Caught
+          <span>With a Greasy Problem.</span>
+        </h2>
+
+        <p>
+          Call or email Faith Works Environmental Solutions today
+          for dependable service and a free quote.
+        </p>
+
+        <div class="contact-buttons">
+
+          <a href="tel:6155009790" class="contact-phone">
+            📞 615-500-9790
+          </a>
+
+          <a
+            href="mailto:Angela@greasetraplady.com"
+            class="contact-email"
+          >
+            ✉ Angela@greasetraplady.com
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+
   <footer class="footer">
-    <p>© <span id="year"></span> Environmental Solutions • Angela Williams</p>
-    <p class="footer__small">Lilac & Purple theme — add more pictures when formatting is confirmed.</p>
+
+    <div class="footer-logo">
+
+      <div class="logo-symbol">✝</div>
+
+      <div>
+        <strong>FAITH WORKS</strong>
+        <small>ENVIRONMENTAL SOLUTIONS LLC</small>
+      </div>
+
+    </div>
+
+    <p>
+      Faith-Based. Service-Driven. Community-Focused.
+    </p>
+
+    <p class="copyright">
+      © <span id="year"></span> Faith Works Environmental Solutions LLC
+    </p>
+
   </footer>
 
+
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
   </script>
+
 </body>
+
 </html>
