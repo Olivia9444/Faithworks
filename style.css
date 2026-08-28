@@ -1,36 +1,36 @@
-/* =========================================================
+/* =========================================
    FAITH WORKS ENVIRONMENTAL SOLUTIONS
-   ========================================================= */
+   MAIN WEBSITE STYLES
+========================================= */
 
 :root {
 
-  --purple-dark: #16052b;
-  --purple-deep: #241044;
-  --purple: #54208a;
-  --purple-bright: #7438b5;
-  --lilac: #c9a6ff;
+  --purple-dark: #241044;
+  --purple: #55208f;
+  --purple-bright: #7135b5;
+  --purple-light: #a879e8;
 
   --green-dark: #245d18;
-  --green: #5cae35;
-  --green-bright: #82d64c;
+  --green: #4d8f27;
+  --green-bright: #76c442;
 
   --white: #ffffff;
-  --cream: #f7f4f1;
-  --text: #19131f;
-  --muted: #68616e;
+  --cream: #faf9fc;
 
-  --border: rgba(84, 32, 138, 0.18);
+  --black: #111111;
+  --gray: #555555;
+  --light-gray: #eeeeee;
 
-  --shadow:
-    0 20px 50px rgba(22, 5, 43, 0.18);
+  --shadow: 0 12px 35px rgba(37, 13, 67, 0.16);
 
   --radius: 18px;
+
 }
 
 
-/* =========================================================
+/* =========================================
    RESET
-   ========================================================= */
+========================================= */
 
 * {
   box-sizing: border-box;
@@ -41,25 +41,24 @@ html {
 }
 
 body {
+
   margin: 0;
 
   font-family:
-    Inter,
-    ui-sans-serif,
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
+    Arial,
+    Helvetica,
     sans-serif;
 
-  color: var(--text);
+  background: var(--white);
 
-  background: #ffffff;
+  color: var(--black);
+
+  line-height: 1.6;
 }
 
 img {
+  max-width: 100%;
   display: block;
-  width: 100%;
 }
 
 a {
@@ -67,32 +66,80 @@ a {
   color: inherit;
 }
 
+.container {
 
-/* =========================================================
-   NAVIGATION
-   ========================================================= */
+  width: min(1180px, 92%);
+
+  margin: 0 auto;
+
+}
+
+
+/* =========================================
+   TOP BAR
+========================================= */
+
+.top-bar {
+
+  background: var(--purple-dark);
+
+  color: white;
+
+  font-size: 0.85rem;
+
+  font-weight: 700;
+
+}
+
+.top-bar-inner {
+
+  min-height: 42px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 20px;
+
+}
+
+.top-bar p {
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.top-bar a {
+
+  color: var(--green-bright);
+
+  white-space: nowrap;
+
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
 
 .site-header {
 
+  background: white;
+
+  border-bottom: 4px solid var(--purple);
+
   position: sticky;
+
   top: 0;
-  z-index: 100;
 
-  background: rgba(255, 255, 255, 0.96);
+  z-index: 1000;
 
-  border-bottom:
-    1px solid rgba(84, 32, 138, 0.12);
-
-  backdrop-filter: blur(12px);
 }
 
-.nav-container {
+.nav {
 
-  width: min(1200px, 92%);
-
-  margin: auto;
-
-  min-height: 82px;
+  min-height: 86px;
 
   display: flex;
 
@@ -101,76 +148,82 @@ a {
   justify-content: space-between;
 
   gap: 30px;
+
 }
 
 
-/* LOGO */
+/* BRAND */
 
-.logo {
+.brand {
 
   display: flex;
 
   align-items: center;
 
-  gap: 10px;
+  gap: 12px;
 
-  min-width: max-content;
 }
 
-.logo-symbol {
+.brand-mark {
 
-  width: 48px;
-  height: 48px;
+  width: 55px;
+
+  height: 55px;
+
+  border-radius: 50%;
+
+  background: var(--purple);
+
+  color: white;
 
   display: grid;
 
   place-items: center;
 
-  border-radius: 50%;
-
-  color: white;
-
-  background:
-    linear-gradient(
-      135deg,
-      var(--purple),
-      var(--green-dark)
-    );
-
-  font-size: 25px;
-
-  box-shadow:
-    0 6px 18px rgba(84, 32, 138, 0.25);
-}
-
-.logo-main {
-
-  display: block;
-
-  color: var(--purple);
-
-  font-size: 1.35rem;
+  font-size: 2rem;
 
   font-weight: 900;
 
-  letter-spacing: -0.5px;
+  border: 4px solid var(--green);
+
 }
 
-.logo-sub {
+.brand-text {
 
-  display: block;
+  display: flex;
 
-  color: var(--green-dark);
+  flex-direction: column;
 
-  font-size: 0.67rem;
+}
+
+.brand-name {
+
+  font-size: 1.65rem;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+
+  color: var(--purple-dark);
+
+  line-height: 1;
+
+}
+
+.brand-subtitle {
+
+  font-size: 0.72rem;
 
   font-weight: 800;
 
-  letter-spacing: 0.7px;
+  color: var(--green-dark);
+
+  letter-spacing: 0.8px;
+
 }
 
 
-/* NAV LINKS */
+/* NAVIGATION */
 
 .navigation {
 
@@ -179,115 +232,120 @@ a {
   align-items: center;
 
   gap: 28px;
+
+  font-weight: 700;
+
 }
 
 .navigation a {
 
-  font-size: 0.9rem;
+  color: var(--purple-dark);
 
-  font-weight: 700;
-
-  color: #443d49;
-
-  transition: color 0.2s ease;
 }
 
 .navigation a:hover {
-  color: var(--purple);
+
+  color: var(--green);
+
 }
 
-
-/* PHONE */
-
-.nav-phone {
-
-  padding: 12px 18px;
-
-  border-radius: 8px;
+.nav-button {
 
   background: var(--purple);
 
-  color: white;
+  color: white !important;
 
-  font-weight: 800;
+  padding: 11px 20px;
 
-  font-size: 0.9rem;
+  border-radius: 8px;
 
-  white-space: nowrap;
 }
 
-.nav-phone:hover {
-  background: var(--purple-bright);
+.nav-button:hover {
+
+  background: var(--green);
+
 }
 
 
-/* =========================================================
+/* =========================================
    HERO
-   ========================================================= */
+========================================= */
 
 .hero {
 
-  width: min(1300px, 94%);
+  background:
 
-  min-height: 650px;
+    linear-gradient(
+      120deg,
+      #f8f4fc 0%,
+      #ffffff 55%,
+      #f2ebfa 100%
+    );
 
-  margin: 0 auto;
+  padding: 70px 0;
+
+  border-bottom: 1px solid #ddd;
+
+}
+
+.hero-grid {
 
   display: grid;
 
   grid-template-columns:
-    0.9fr
-    1.1fr;
+    0.95fr
+    1.05fr;
 
   align-items: center;
 
-  gap: 50px;
+  gap: 55px;
 
-  padding: 65px 0;
 }
 
 
 /* HERO TEXT */
 
 .hero-content {
-  padding-left: 20px;
+
+  max-width: 600px;
+
 }
 
 .eyebrow {
 
   display: inline-block;
 
-  margin-bottom: 18px;
+  background: var(--green);
 
-  padding: 8px 13px;
+  color: white;
 
-  border-radius: 30px;
+  padding: 7px 14px;
 
-  background: #eee7f7;
+  border-radius: 5px;
 
-  color: var(--purple);
-
-  font-size: 0.72rem;
+  font-size: 0.78rem;
 
   font-weight: 900;
 
   letter-spacing: 1px;
+
+  margin-bottom: 18px;
+
 }
 
 .hero h1 {
 
   margin: 0;
 
-  max-width: 620px;
-
-  font-size:
-    clamp(3rem, 5vw, 5.3rem);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
 
   line-height: 0.98;
 
-  letter-spacing: -3px;
+  letter-spacing: -2px;
 
   color: var(--purple-dark);
+
 }
 
 .hero h1 span {
@@ -295,19 +353,19 @@ a {
   display: block;
 
   color: var(--green);
+
 }
 
-.hero-text {
-
-  max-width: 540px;
-
-  margin: 28px 0;
+.hero-lead {
 
   font-size: 1.15rem;
 
-  line-height: 1.7;
+  color: var(--gray);
 
-  color: var(--muted);
+  max-width: 560px;
+
+  margin: 25px 0;
+
 }
 
 
@@ -319,188 +377,223 @@ a {
 
   flex-wrap: wrap;
 
-  gap: 12px;
+  gap: 14px;
+
+  margin: 25px 0;
+
 }
 
 .button {
 
-  display: inline-flex;
+  display: inline-block;
 
-  align-items: center;
-
-  justify-content: center;
-
-  min-height: 52px;
-
-  padding: 0 22px;
+  padding: 14px 24px;
 
   border-radius: 8px;
 
-  font-weight: 800;
+  font-weight: 900;
 
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-}
+  text-align: center;
 
-.button:hover {
+  transition: 0.2s ease;
 
-  transform: translateY(-2px);
-
-  box-shadow:
-    0 10px 25px rgba(22, 5, 43, 0.18);
 }
 
 .button-primary {
 
+  background: var(--purple);
+
   color: white;
 
-  background:
-    linear-gradient(
-      135deg,
-      var(--purple),
-      var(--purple-bright)
-    );
+}
+
+.button-primary:hover {
+
+  background: var(--purple-dark);
+
+  transform: translateY(-2px);
+
 }
 
 .button-secondary {
 
-  color: var(--purple);
-
   background: white;
 
-  border:
-    2px solid var(--purple);
+  color: var(--purple);
+
+  border: 2px solid var(--purple);
+
+}
+
+.button-secondary:hover {
+
+  background: var(--purple);
+
+  color: white;
+
 }
 
 
-/* HERO TRUST */
+/* TRUST */
 
 .hero-trust {
 
   display: flex;
 
+  gap: 22px;
+
   flex-wrap: wrap;
 
-  gap: 18px;
+  margin-top: 20px;
 
-  margin-top: 30px;
+  font-weight: 800;
 
-  font-size: 0.8rem;
+  color: var(--purple-dark);
 
-  font-weight: 700;
-
-  color: #514a56;
 }
 
 .hero-trust strong {
+
   color: var(--green);
+
+  font-size: 1.2rem;
+
 }
 
 
-/* =========================================================
-   HERO IMAGE
-   ========================================================= */
+/* HERO IMAGE */
 
 .hero-image {
 
   position: relative;
 
-  min-height: 530px;
+  border-radius: 20px;
 
   overflow: hidden;
 
-  border-radius: 24px;
-
-  background: var(--purple-dark);
-
   box-shadow: var(--shadow);
+
+  border: 7px solid white;
+
 }
 
 .hero-image img {
 
   width: 100%;
-  height: 100%;
 
-  min-height: 530px;
+  height: 510px;
 
   object-fit: cover;
+
+  object-position: center;
+
 }
-
-
-/* Purple overlay */
-
-.hero-image::after {
-
-  content: "";
-
-  position: absolute;
-
-  inset: 0;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(22, 5, 43, 0.15),
-      transparent 60%
-    );
-
-  pointer-events: none;
-}
-
-
-/* IMAGE LABEL */
 
 .image-badge {
 
   position: absolute;
 
-  left: 25px;
-  bottom: 25px;
+  left: 22px;
 
-  z-index: 2;
+  bottom: 22px;
 
-  padding: 16px 20px;
-
-  border-radius: 10px;
+  background: var(--purple);
 
   color: white;
 
-  background:
-    rgba(22, 5, 43, 0.9);
+  padding: 14px 20px;
 
-  border-left:
-    5px solid var(--green);
+  border-left: 6px solid var(--green-bright);
+
+  border-radius: 8px;
+
+  display: flex;
+
+  flex-direction: column;
+
 }
 
 .image-badge span {
 
-  display: block;
-
-  color: var(--green-bright);
-
-  font-size: 0.75rem;
-
   font-weight: 900;
 
-  letter-spacing: 1px;
+  font-size: 1.25rem;
+
 }
 
 .image-badge strong {
 
-  display: block;
+  font-size: 0.8rem;
 
-  margin-top: 4px;
-
-  font-size: 0.95rem;
-
-  line-height: 1.2;
 }
 
 
-/* =========================================================
+/* =========================================
+   SERVICE STRIP
+========================================= */
+
+.service-strip {
+
+  background: var(--purple);
+
+  color: white;
+
+}
+
+.service-strip-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+}
+
+.service-strip-grid > div {
+
+  min-height: 110px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  padding: 15px;
+
+  border-right: 1px solid rgba(255,255,255,0.25);
+
+}
+
+.service-strip-grid > div:last-child {
+
+  border-right: none;
+
+}
+
+.service-strip strong {
+
+  font-size: 1rem;
+
+}
+
+.service-strip span {
+
+  color: var(--green-bright);
+
+  font-size: 0.9rem;
+
+  font-weight: 900;
+
+}
+
+
+/* =========================================
    SECTION HEADINGS
-   ========================================================= */
+========================================= */
 
 .section-heading {
 
@@ -509,173 +602,147 @@ a {
   margin: 0 auto 45px;
 
   text-align: center;
+
 }
 
 .section-label {
 
   display: inline-block;
 
-  margin-bottom: 12px;
+  color: var(--green-dark);
 
-  color: var(--purple);
-
-  font-size: 0.72rem;
+  font-size: 0.8rem;
 
   font-weight: 900;
 
   letter-spacing: 1.5px;
+
+  margin-bottom: 8px;
+
 }
 
-.section-heading h2,
-.feature-content h2,
-.why-content h2,
-.area-section h2,
-.contact-content h2 {
+.section-heading h2 {
 
   margin: 0;
 
-  font-size:
-    clamp(2rem, 4vw, 3.5rem);
-
-  line-height: 1.05;
-
-  letter-spacing: -1.5px;
-
   color: var(--purple-dark);
-}
 
-.section-heading h2 span,
-.feature-content h2 span,
-.why-content h2 span,
-.area-section h2 span,
-.contact-content h2 span {
+  font-size: clamp(2rem, 4vw, 3rem);
 
-  color: var(--green);
+  line-height: 1.1;
+
 }
 
 .section-heading p {
 
-  margin: 18px auto 0;
+  color: var(--gray);
 
-  max-width: 650px;
+  font-size: 1.05rem;
 
-  color: var(--muted);
-
-  line-height: 1.7;
 }
 
 
-/* =========================================================
+/* =========================================
    SERVICES
-   ========================================================= */
+========================================= */
 
 .services-section {
 
-  padding: 90px 5%;
+  padding: 90px 0;
 
-  background:
-    #f7f4fa;
+  background: white;
+
 }
 
 .services-grid {
 
-  width: min(1150px, 100%);
-
-  margin: auto;
-
   display: grid;
 
   grid-template-columns:
-    repeat(4, 1fr);
+    repeat(3, 1fr);
 
-  gap: 18px;
+  gap: 22px;
+
 }
-
 
 .service-card {
 
-  min-height: 230px;
-
-  padding: 28px 22px;
+  padding: 28px;
 
   border-radius: var(--radius);
 
-  background: white;
+  background: #faf8fd;
 
-  border:
-    1px solid var(--border);
+  border: 2px solid #e7d9f5;
 
-  box-shadow:
-    0 8px 30px rgba(22, 5, 43, 0.06);
+  transition: 0.2s ease;
 
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
 }
 
 .service-card:hover {
 
-  transform: translateY(-6px);
+  transform: translateY(-5px);
 
-  box-shadow:
-    0 18px 40px rgba(22, 5, 43, 0.12);
+  border-color: var(--purple);
+
+  box-shadow: var(--shadow);
+
 }
-
 
 .service-icon {
 
-  width: 58px;
-  height: 58px;
+  width: 55px;
 
-  margin-bottom: 22px;
+  height: 55px;
+
+  border-radius: 50%;
+
+  background: var(--purple);
+
+  color: white;
 
   display: grid;
 
   place-items: center;
 
-  border-radius: 14px;
+  font-size: 1.5rem;
 
-  background: var(--purple-deep);
+  margin-bottom: 16px;
 
-  color: white;
-
-  font-size: 1.25rem;
-
-  font-weight: 900;
 }
 
 .service-card h3 {
 
-  margin: 0 0 10px;
-
   color: var(--purple-dark);
 
-  font-size: 1.1rem;
+  margin: 0 0 8px;
+
+  font-size: 1.25rem;
+
 }
 
 .service-card p {
 
+  color: var(--gray);
+
   margin: 0;
 
-  color: var(--muted);
-
-  line-height: 1.6;
-
-  font-size: 0.9rem;
 }
 
 
-/* =========================================================
-   FEATURE / WOMAN WORKING
-   ========================================================= */
+/* =========================================
+   FEATURE / ABOUT
+========================================= */
 
 .feature-section {
 
-  width: min(1250px, 94%);
+  padding: 90px 0;
 
-  margin: auto;
+  background: #f5f2f8;
 
-  padding: 100px 0;
+}
+
+.feature-grid {
 
   display: grid;
 
@@ -685,80 +752,66 @@ a {
 
   align-items: center;
 
-  gap: 70px;
+  gap: 65px;
+
 }
 
 .feature-image {
 
-  position: relative;
-
-  min-height: 520px;
-
-  border-radius: 22px;
+  border-radius: 18px;
 
   overflow: hidden;
 
-  background: var(--purple-dark);
-
   box-shadow: var(--shadow);
+
+  border: 6px solid white;
+
 }
 
 .feature-image img {
 
   width: 100%;
-  height: 100%;
 
-  min-height: 520px;
+  height: 550px;
 
   object-fit: cover;
+
 }
 
-.equipment-tag {
+.feature-content h2 {
 
-  position: absolute;
+  font-size: clamp(2rem, 4vw, 3.2rem);
 
-  left: 22px;
-  bottom: 22px;
+  line-height: 1.05;
 
-  padding: 13px 18px;
+  color: var(--purple-dark);
 
-  color: white;
+  margin: 5px 0 20px;
 
-  background: var(--green-dark);
-
-  border-radius: 7px;
-
-  font-size: 0.75rem;
-
-  font-weight: 900;
-
-  letter-spacing: 1px;
 }
 
+.feature-content h2 span {
 
-.feature-content p {
+  color: var(--green);
 
-  max-width: 580px;
-
-  margin: 22px 0;
-
-  color: var(--muted);
-
-  font-size: 1.02rem;
-
-  line-height: 1.75;
 }
 
+.feature-content > p {
 
-/* CHECK LIST */
+  color: var(--gray);
+
+  font-size: 1.05rem;
+
+}
 
 .check-list {
 
-  margin: 25px 0 30px;
+  list-style: none;
 
   padding: 0;
 
-  list-style: none;
+  margin: 25px 0;
+
 }
 
 .check-list li {
@@ -769,595 +822,685 @@ a {
 
   gap: 12px;
 
-  margin: 13px 0;
+  margin: 12px 0;
 
   font-weight: 700;
 
-  color: #38323c;
 }
 
-.check-list span {
+.check-list strong {
 
-  width: 24px;
-  height: 24px;
+  color: var(--green);
 
-  display: grid;
+  font-size: 1.25rem;
 
-  place-items: center;
+}
 
-  border-radius: 50%;
+.faith-message {
 
-  background: var(--green);
+  display: inline-flex;
+
+  flex-direction: column;
+
+  background: var(--purple);
 
   color: white;
 
-  font-size: 0.75rem;
+  padding: 18px 25px;
+
+  border-radius: 10px;
+
+  border-left: 7px solid var(--green-bright);
+
+  margin-top: 10px;
+
+}
+
+.faith-message strong {
+
+  font-size: 1.25rem;
+
+}
+
+.faith-message span {
+
+  color: var(--green-bright);
 
   font-weight: 900;
+
 }
 
 
-/* =========================================================
-   INDUSTRIES
-   ========================================================= */
+/* =========================================
+   SPECIAL SECTION
+========================================= */
 
-.industries-section {
-
-  padding: 90px 5%;
+.special-section {
 
   background: var(--purple-dark);
 
   color: white;
+
+  padding: 80px 0;
+
 }
 
-.industries-section .section-heading h2 {
-  color: white;
-}
-
-.industries-section .section-heading p {
-  color: #d7cfe0;
-}
-
-.industry-grid {
-
-  width: min(1100px, 100%);
-
-  margin: auto;
+.special-grid {
 
   display: grid;
 
   grid-template-columns:
-    repeat(4, 1fr);
-
-  gap: 16px;
-}
-
-.industry-card {
-
-  padding: 30px 20px;
-
-  text-align: center;
-
-  border:
-    1px solid rgba(255,255,255,0.12);
-
-  border-radius: 15px;
-
-  background:
-    rgba(255,255,255,0.05);
-}
-
-.industry-icon {
-
-  font-size: 2rem;
-
-  margin-bottom: 15px;
-}
-
-.industry-card h3 {
-
-  margin: 0 0 8px;
-
-  font-size: 1rem;
-}
-
-.industry-card p {
-
-  margin: 0;
-
-  color: #d5cbdc;
-
-  font-size: 0.85rem;
-
-  line-height: 1.5;
-}
-
-
-/* =========================================================
-   WHY FAITH WORKS
-   ========================================================= */
-
-.why-section {
-
-  width: min(1150px, 92%);
-
-  margin: auto;
-
-  padding: 100px 0;
-
-  display: grid;
-
-  grid-template-columns:
-    1.1fr
-    0.9fr;
-
-  gap: 70px;
-
-  align-items: center;
-}
-
-.why-content p {
-
-  max-width: 600px;
-
-  color: var(--muted);
-
-  line-height: 1.8;
-
-  font-size: 1rem;
-}
-
-
-.promise-card {
-
-  display: flex;
-
-  gap: 20px;
-
-  align-items: center;
-
-  padding: 35px;
-
-  border-radius: 20px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #f2eafa,
-      #ffffff
-    );
-
-  border:
-    1px solid var(--border);
-}
-
-.promise-icon {
-
-  flex-shrink: 0;
-
-  width: 70px;
-  height: 70px;
-
-  display: grid;
-
-  place-items: center;
-
-  border-radius: 50%;
-
-  color: white;
-
-  background: var(--green);
-
-  font-size: 2rem;
-
-  font-weight: 900;
-}
-
-.promise-card h3 {
-
-  margin: 0 0 8px;
-
-  color: var(--purple);
-
-  font-size: 1.4rem;
-}
-
-.promise-card p {
-
-  margin: 0;
-
-  color: var(--muted);
-
-  line-height: 1.6;
-}
-
-
-/* =========================================================
-   SERVICE AREA
-   ========================================================= */
-
-.area-section {
-
-  padding: 70px 6%;
-
-  display: grid;
-
-  grid-template-columns:
-    1fr
-    1fr;
+    0.8fr
+    1.2fr;
 
   align-items: center;
 
   gap: 50px;
 
-  color: white;
-
-  background:
-    linear-gradient(
-      135deg,
-      var(--green-dark),
-      #183c12
-    );
 }
 
-.area-section h2 {
-  color: white;
-}
+.special-label {
 
-.area-list {
+  display: inline-block;
 
-  display: grid;
+  background: var(--green);
 
-  grid-template-columns:
-    repeat(2, 1fr);
+  padding: 7px 13px;
 
-  gap: 14px;
-}
-
-.area-list span {
-
-  font-weight: 800;
-
-  color: white;
-}
-
-
-/* =========================================================
-   CONTACT
-   ========================================================= */
-
-.contact-section {
-
-  padding: 100px 6%;
-
-  text-align: center;
-
-  background:
-    linear-gradient(
-      135deg,
-      #ffffff,
-      #f3edf9
-    );
-}
-
-.contact-content {
-
-  max-width: 800px;
-
-  margin: auto;
-}
-
-.contact-content p {
-
-  max-width: 600px;
-
-  margin: 20px auto 30px;
-
-  color: var(--muted);
-
-  line-height: 1.7;
-}
-
-.contact-buttons {
-
-  display: flex;
-
-  justify-content: center;
-
-  flex-wrap: wrap;
-
-  gap: 12px;
-}
-
-.contact-phone {
-
-  padding: 16px 25px;
-
-  border-radius: 8px;
-
-  color: white;
-
-  background: var(--purple);
-
-  font-size: 1.25rem;
+  border-radius: 5px;
 
   font-weight: 900;
+
+  letter-spacing: 1px;
+
 }
 
-.contact-email {
+.special-content h2 {
 
-  padding: 16px 25px;
+  font-size: clamp(2.4rem, 5vw, 4rem);
 
-  border-radius: 8px;
+  line-height: 1;
 
-  color: var(--purple);
+  margin: 18px 0;
 
-  background: white;
-
-  border:
-    2px solid var(--purple);
-
-  font-weight: 800;
 }
 
-
-/* =========================================================
-   FOOTER
-   ========================================================= */
-
-.footer {
-
-  padding: 45px 5%;
-
-  text-align: center;
-
-  color: #d8cfdf;
-
-  background: #09030f;
-}
-
-.footer-logo {
-
-  display: flex;
-
-  justify-content: center;
-
-  align-items: center;
-
-  gap: 10px;
-
-  margin-bottom: 18px;
-}
-
-.footer-logo .logo-symbol {
-
-  width: 42px;
-  height: 42px;
-}
-
-.footer-logo strong {
-
-  display: block;
-
-  color: white;
-
-  font-size: 1.1rem;
-}
-
-.footer-logo small {
+.special-content h2 span {
 
   display: block;
 
   color: var(--green-bright);
 
-  font-size: 0.65rem;
+}
 
-  font-weight: 800;
+.special-content p {
+
+  font-size: 1.1rem;
+
+}
+
+.price {
+
+  font-size: clamp(4rem, 8vw, 7rem);
+
+  line-height: 0.9;
+
+  color: white;
+
+  font-weight: 900;
+
+}
+
+.price-note {
+
+  color: #d8cdea;
+
+}
+
+.button-light {
+
+  margin-top: 15px;
+
+  background: var(--green-bright);
+
+  color: var(--purple-dark);
+
+}
+
+.button-light:hover {
+
+  background: white;
+
+}
+
+.special-image {
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  border: 6px solid white;
+
+}
+
+.special-image img {
+
+  width: 100%;
+
+  height: 520px;
+
+  object-fit: cover;
+
+}
+
+
+/* =========================================
+   WHO WE SERVE
+========================================= */
+
+.audience-section {
+
+  padding: 90px 0;
+
+  background: white;
+
+}
+
+.audience-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(6, 1fr);
+
+  gap: 15px;
+
+}
+
+.audience-card {
+
+  min-height: 150px;
+
+  border: 2px solid #e6d9f2;
+
+  border-radius: 14px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 15px;
+
+  transition: 0.2s ease;
+
+}
+
+.audience-card:hover {
+
+  background: var(--purple);
+
+  color: white;
+
+  border-color: var(--purple);
+
+}
+
+.audience-card span {
+
+  font-size: 2rem;
+
+  margin-bottom: 8px;
+
+}
+
+
+/* =========================================
+   CTA
+========================================= */
+
+.cta-section {
+
+  background:
+
+    linear-gradient(
+      110deg,
+      var(--green-dark),
+      var(--green)
+    );
+
+  color: white;
+
+  padding: 70px 0;
+
+}
+
+.cta-content {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 40px;
+
+}
+
+.cta-content .section-label {
+
+  color: white;
+
+}
+
+.cta-content h2 {
+
+  font-size: clamp(2rem, 4vw, 3.5rem);
+
+  line-height: 1;
+
+  margin: 8px 0;
+
+}
+
+.cta-content p {
+
+  margin: 0;
+
+  font-size: 1.1rem;
+
+}
+
+.cta-contact {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+
+  text-align: right;
+
+}
+
+.cta-contact a:first-child {
+
+  background: white;
+
+  color: var(--purple-dark);
+
+  padding: 15px 25px;
+
+  border-radius: 8px;
+
+  font-size: 1.6rem;
+
+  font-weight: 900;
+
+}
+
+.cta-contact a:last-child {
+
+  font-weight: 700;
+
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+
+  background: #150a22;
+
+  color: white;
+
+  padding-top: 55px;
+
+}
+
+.footer-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    2fr
+    1fr
+    1fr;
+
+  gap: 50px;
+
+  padding-bottom: 45px;
+
+}
+
+.footer-brand {
+
+  color: var(--green-bright);
+
+  font-size: 1.7rem;
+
+  font-weight: 900;
+
+}
+
+.footer h3 {
+
+  color: var(--green-bright);
+
+  margin-top: 0;
+
 }
 
 .footer p {
 
-  margin: 7px 0;
+  color: #d5cfe0;
+
+}
+
+.footer a {
+
+  color: white;
+
+}
+
+.footer a:hover {
+
+  color: var(--green-bright);
+
+}
+
+.footer-tagline {
+
+  font-weight: 700;
+
+}
+
+.footer-bottom {
+
+  border-top: 1px solid rgba(255,255,255,0.15);
+
+  text-align: center;
+
+  padding: 20px;
+
+}
+
+.footer-bottom p {
+
+  margin: 0;
 
   font-size: 0.85rem;
-}
 
-.footer .copyright {
-
-  color: #80768a;
-
-  font-size: 0.75rem;
 }
 
 
-/* =========================================================
+/* =========================================
    TABLET
-   ========================================================= */
+========================================= */
 
-@media (max-width: 1050px) {
+@media (max-width: 1000px) {
 
   .navigation {
-    gap: 15px;
+
+    gap: 14px;
+
   }
 
-  .services-grid,
-  .industry-grid {
+  .services-grid {
+
     grid-template-columns:
       repeat(2, 1fr);
+
   }
 
-  .hero {
+  .audience-grid {
+
     grid-template-columns:
-      1fr
-      1fr;
+      repeat(3, 1fr);
 
-    gap: 30px;
   }
 
-  .hero h1 {
-    font-size: 3.6rem;
+  .hero-grid {
+
+    gap: 35px;
+
   }
+
 }
 
 
-/* =========================================================
+/* =========================================
    MOBILE
-   ========================================================= */
+========================================= */
 
-@media (max-width: 800px) {
+@media (max-width: 760px) {
 
-  .nav-container {
+  .top-bar-inner {
 
-    min-height: 70px;
+    justify-content: center;
+
+    text-align: center;
+
+  }
+
+  .top-bar p {
+
+    display: none;
+
+  }
+
+  .nav {
+
+    flex-direction: column;
+
+    padding: 15px 0;
+
   }
 
   .navigation {
-    display: none;
+
+    width: 100%;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
   }
 
-  .nav-phone {
-    padding: 10px 12px;
+  .navigation a {
 
-    font-size: 0.75rem;
+    font-size: 0.9rem;
+
   }
 
   .hero {
-
-    width: 92%;
-
-    grid-template-columns: 1fr;
 
     padding: 45px 0;
 
   }
 
-  .hero-content {
-    padding-left: 0;
+  .hero-grid {
+
+    grid-template-columns: 1fr;
+
   }
 
   .hero h1 {
 
-    font-size: clamp(2.7rem, 12vw, 4rem);
+    font-size: 2.8rem;
 
-    letter-spacing: -2px;
   }
 
-  .hero-image,
   .hero-image img {
 
-    min-height: 400px;
+    height: 380px;
+
   }
 
-  .services-section,
-  .industries-section {
+  .service-strip-grid {
 
-    padding: 70px 5%;
+    grid-template-columns:
+      repeat(2, 1fr);
+
   }
 
-  .services-grid,
-  .industry-grid {
+  .service-strip-grid > div:nth-child(2) {
+
+    border-right: none;
+
+  }
+
+  .services-grid {
 
     grid-template-columns: 1fr;
+
   }
 
-  .feature-section {
-
-    grid-template-columns: 1fr;
-
-    gap: 40px;
-
-    padding: 70px 0;
-  }
-
-  .feature-image,
-  .feature-image img {
-
-    min-height: 400px;
-  }
-
-  .why-section {
+  .feature-grid {
 
     grid-template-columns: 1fr;
 
     gap: 35px;
 
-    padding: 70px 0;
   }
 
-  .area-section {
+  .feature-image img {
+
+    height: 400px;
+
+  }
+
+  .special-grid {
 
     grid-template-columns: 1fr;
 
-    gap: 30px;
-
-    padding: 60px 7%;
   }
 
-  .contact-section {
+  .special-image img {
 
-    padding: 70px 5%;
+    height: 400px;
+
   }
 
-  .contact-buttons {
+  .audience-grid {
+
+    grid-template-columns:
+      repeat(2, 1fr);
+
+  }
+
+  .cta-content {
 
     flex-direction: column;
+
+    align-items: flex-start;
+
   }
 
-  .contact-phone,
-  .contact-email {
+  .cta-contact {
 
     width: 100%;
+
+    text-align: left;
+
+  }
+
+  .cta-contact a:first-child {
+
+    text-align: center;
+
+  }
+
+  .footer-grid {
+
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+
   }
 
 }
 
 
-/* =========================================================
+/* =========================================
    SMALL PHONES
-   ========================================================= */
+========================================= */
 
 @media (max-width: 480px) {
 
-  .logo-main {
-    font-size: 1rem;
+  .brand-name {
+
+    font-size: 1.3rem;
+
   }
 
-  .logo-sub {
-    font-size: 0.5rem;
+  .brand-subtitle {
+
+    font-size: 0.6rem;
+
   }
 
-  .logo-symbol {
+  .navigation {
 
-    width: 40px;
-    height: 40px;
+    gap: 9px;
 
-    font-size: 20px;
   }
 
-  .nav-phone {
-    display: none;
+  .nav-button {
+
+    padding: 9px 14px;
+
   }
 
-  .hero-trust {
+  .hero h1 {
 
-    display: grid;
+    font-size: 2.35rem;
 
-    gap: 8px;
   }
 
   .hero-buttons {
 
     flex-direction: column;
+
   }
 
   .button {
 
     width: 100%;
+
   }
 
-  .area-list {
+  .service-strip-grid {
 
     grid-template-columns: 1fr;
+
+  }
+
+  .service-strip-grid > div {
+
+    border-right: none;
+
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+
+  }
+
+  .audience-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .price {
+
+    font-size: 5rem;
+
   }
 
 }
