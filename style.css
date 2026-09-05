@@ -1242,6 +1242,166 @@ a {
 
 
 /* =========================================
+   ACTIVE PAGE LAYOUT
+========================================= */
+
+.header-inner,
+.hero,
+.services,
+.about,
+.who-we-serve,
+.contact-section,
+.footer {
+
+  width: min(1180px, 92%);
+
+  margin-inline: auto;
+
+}
+
+.header-inner {
+
+  min-height: 86px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+}
+
+.hero {
+
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+
+  align-items: center;
+
+  gap: 48px;
+
+}
+
+.hero-image {
+
+  max-width: 560px;
+
+  justify-self: center;
+
+}
+
+.hero-image img {
+
+  height: auto;
+
+  max-height: 420px;
+
+  object-fit: contain;
+
+}
+
+.services,
+.about,
+.who-we-serve,
+.contact-section {
+
+  padding-left: 0;
+
+  padding-right: 0;
+
+}
+
+.about {
+
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
+  align-items: center;
+
+  gap: 55px;
+
+}
+
+.about-image img {
+
+  width: 100%;
+
+  height: auto;
+
+  object-fit: contain;
+
+}
+
+.footer {
+
+  width: 100%;
+
+  padding: 45px 4% 25px;
+
+  text-align: center;
+
+}
+
+.social-links {
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 14px;
+
+  margin: 24px 0;
+
+}
+
+.social-links a {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 8px 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  border-radius: 6px;
+
+}
+
+.social-links svg {
+
+  width: 18px;
+
+  height: 18px;
+
+  fill: none;
+
+  stroke: currentColor;
+
+  stroke-linecap: round;
+
+  stroke-linejoin: round;
+
+  stroke-width: 1.8;
+
+}
+
+.social-links a:last-child svg {
+
+  fill: currentColor;
+
+  stroke: none;
+
+}
+
+
+/* =========================================
    TABLET
 ========================================= */
 
@@ -1323,6 +1483,20 @@ a {
   .hero {
 
     padding: 45px 0;
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .hero-image {
+
+    width: 100%;
+
+  }
+
+  .about {
+
+    grid-template-columns: 1fr;
 
   }
 
