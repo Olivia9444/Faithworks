@@ -1713,3 +1713,29 @@ a {
   }
 
 }
+
+
+/* =========================================
+   WHO WE SERVE ALIGNMENT
+========================================= */
+
+.who-we-serve .audience-grid {
+
+  grid-template-columns:
+    repeat(3, minmax(0, 260px));
+
+  justify-content: center;
+
+  gap: 22px;
+
+}
+
+@media (max-width: 760px) {
+
+  .who-we-serve .audience-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+}
