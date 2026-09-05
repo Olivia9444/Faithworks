@@ -1277,29 +1277,64 @@ a {
 
   display: grid;
 
-  grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+  grid-template-columns: minmax(0, 760px);
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+}
+
+.hero-content {
+
+  max-width: 760px;
+
+  margin-inline: auto;
+
+}
+
+.hero-buttons,
+.hero-highlights {
+
+  justify-content: center;
+
+}
+
+.truck-feature {
+
+  width: min(1180px, 92%);
+
+  margin-inline: auto;
+
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 
   align-items: center;
 
   gap: 48px;
 
-}
-
-.hero-image {
-
-  max-width: 560px;
-
-  justify-self: center;
+  text-align: center;
 
 }
 
-.hero-image img {
+.truck-feature img {
+
+  width: 100%;
 
   height: auto;
 
-  max-height: 420px;
-
   object-fit: contain;
+
+}
+
+.truck-content {
+
+  display: grid;
+
+  place-items: center;
 
 }
 
@@ -1488,9 +1523,9 @@ a {
 
   }
 
-  .hero-image {
+  .truck-feature {
 
-    width: 100%;
+    grid-template-columns: 1fr;
 
   }
 
